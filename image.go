@@ -71,6 +71,12 @@ var (
 	ErrMissingOutputStream = errors.New("missing output stream")
 )
 
+// (added by wolfgang)
+func (c *Client) LoadImage(in io.Reader, w io.Writer) error {
+        path := "/images/load"
+        return c.stream("POST", path, true, nil, in, w, nil)
+}
+
 // ListImages returns the list of available images in the server.
 //
 // See http://goo.gl/dkMrwP for more details.
