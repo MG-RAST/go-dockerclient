@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fsouza/go-dockerclient/utils"
+	"github.com/MG-RAST/go-dockerclient/utils"
 )
 
 const userAgent = "go-dockerclient"
