@@ -94,11 +94,11 @@ var (
 	ErrMultipleContexts = errors.New("image build may not be provided BOTH context dir and input stream")
 )
 
-// (added by wolfgang)
-func (c *Client) LoadImage(in io.Reader, w io.Writer) error {
-        path := "/images/load"
-        return c.stream("POST", path, true, nil, in, w, nil)
-}
+// (deprecated, replaced by new upstream LoadImage, was added by wolfgang)
+//func (c *Client) LoadImage(in io.Reader, w io.Writer) error {
+//        path := "/images/load"
+//        return c.stream("POST", path, true, nil, in, w, nil)
+//}
 
 // ListImages returns the list of available images in the server.
 //
